@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>Café Solace | Cozy Premium Cafe & Coffee House</title>
+  <meta name="description" content="Welcome to Café Solace, a cozy, premium sanctuary for coffee lovers. Experience artisan pour-overs, fresh pastries, delicious desserts, and a warm atmosphere. Reserve your table today!">
+  <meta name="keywords" content="Cafe, Coffee House, Premium Coffee, Espresso, Pour-over, Croissants, Pastries, Café Solace, Table Reservation">
+  <meta name="author" content="Café Solace">
+  <link rel="canonical" href="https://cafesolace.com">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cafesolace.com">
+  <meta property="og:title" content="Café Solace | Cozy Premium Cafe & Coffee House">
+  <meta property="og:description" content="Welcome to Café Solace, a cozy, premium sanctuary for coffee lovers. Experience artisan pour-overs, fresh pastries, and warm ambiance.">
+  <meta property="og:image" content="assets/hero_bg.png">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://cafesolace.com">
+  <meta property="twitter:title" content="Café Solace | Cozy Premium Cafe & Coffee House">
+  <meta property="twitter:description" content="Experience artisan pour-overs, fresh pastries, and warm ambiance. Reserve your table today!">
+  <meta property="twitter:image" content="assets/hero_bg.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- EmailJS Integration -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      // EmailJS Public Key Placeholder
+      emailjs.init("YOUR_PUBLIC_KEY");
+    })();
+  </script>
+
+  <!-- Local Business Schema JSON-LD -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CafeOrCoffeeShop",
+      "name": "Café Solace",
+      "image": "https://cafesolace.com/assets/hero_bg.png",
+      "@id": "https://cafesolace.com",
+      "url": "https://cafesolace.com",
+      "telephone": "+1234567890",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Serenity Lane",
+        "addressLocality": "Brewtown",
+        "addressRegion": "CA",
+        "postalCode": "90210",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 34.0522,
+        "longitude": -118.2437
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "07:00",
+          "closes": "21:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday", "Sunday"],
+          "opens": "08:00",
+          "closes": "22:00"
+        }
+      ],
+      "menu": "https://cafesolace.com#menu",
+      "servesCuisine": "Coffee, Bakery, Desserts"
+    }
+  </script>
+  <!-- Anti-flash script for Dark Mode -->
+  <script>
+    const t = localStorage.getItem('theme');
+    const d = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (t === 'dark' || (!t && d)) document.documentElement.setAttribute('data-theme','dark');
+  </script>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="header">
+    <div class="header-container container">
+      <!-- Logo -->
+      <a href="#" class="logo">
+        <span class="logo-text">Solace</span>
+        <span class="logo-dot">.</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-desktop">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#menu" class="nav-link">Menu</a>
+        <a href="#special" class="nav-link">Special</a>
+        <a href="#about" class="nav-link">Our Story</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#location" class="nav-link">Find Us</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Utility Actions -->
+      <div class="header-actions">
+        <!-- Dark Mode Toggle -->
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2"></path>
+            <path d="M12 20v2"></path>
+            <path d="m4.93 4.93 1.41 1.41"></path>
+            <path d="m17.66 17.66 1.41 1.41"></path>
+            <path d="M2 12h2"></path>
+            <path d="M20 12h2"></path>
+            <path d="m6.34 17.66-1.41 1.41"></path>
+            <path d="m19.07 4.93-1.41 1.41"></path>
+          </svg>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+          </svg>
+        </button>
+
+        <a href="#contact" class="btn btn-primary btn-header-reserve">Reserve Table</a>
+
+        <!-- Hamburger Button -->
+        <button class="hamburger" id="hamburger-btn" aria-label="Open Navigation Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="drawer-header">
+      <a href="#" class="logo">
+        <span class="logo-text">Solace</span><span class="logo-dot">.</span>
+      </a>
+      <button class="drawer-close" id="drawer-close-btn" aria-label="Close Navigation Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <nav class="drawer-nav">
+      <a href="#hero" class="drawer-link">Home</a>
+      <a href="#menu" class="drawer-link">Menu</a>
+      <a href="#special" class="drawer-link">Special</a>
+      <a href="#about" class="drawer-link">Our Story</a>
+      <a href="#gallery" class="drawer-link">Gallery</a>
+      <a href="#location" class="drawer-link">Find Us</a>
+      <a href="#contact" class="drawer-link">Contact</a>
+      <a href="#contact" class="btn btn-primary drawer-btn">Reserve Table</a>
+    </nav>
+  </div>
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+
+  <!-- Hero Section -->
+  <section class="hero scroll-reveal" id="hero" style="background-image: linear-gradient(rgba(45, 30, 21, 0.6), rgba(45, 30, 21, 0.7)), url('assets/hero_bg.png');">
+    <div class="hero-content container">
+      <span class="hero-subtitle">Est. 2026</span>
+      <h1 class="hero-title">Your Sanctuary for Exquisite Coffee</h1>
+      <p class="hero-desc">Indulge in roasted-to-perfection beans, hand-crafted artisan beverages, and delectable warm pastries, wrapped in the comforting embrace of Café Solace.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Reserve a Table</a>
+        <a href="#menu" class="btn btn-secondary">Explore Menu</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-stars">★★★★★</div>
+        <span class="trust-text">Rated 4.9/5 by 500+ Coffee Lovers</span>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <a href="#menu" aria-label="Scroll to Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Today's Special Section -->
+  <section class="special-section scroll-reveal" id="special">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">Today's Highlight</span>
+        <h2 class="section-title">The Master's Special</h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="special-container">
+        <div class="special-image-wrapper">
+          <img src="assets/special.png" alt="Salted Caramel Pecan Latte" class="special-img" loading="lazy">
+          <span class="special-badge">Chef's Signature</span>
+        </div>
+        <div class="special-content">
+          <span class="special-category">Specialty Beverage</span>
+          <h3 class="special-item-title">Salted Caramel Pecan Latte</h3>
+          <p class="special-desc">A luxurious fusion of house-blend espresso, rich steamed almond milk, and velvety homemade salted caramel syrup. Garnished beautifully with clouds of whipped cream, an extra caramel drizzle, and a crunchy dusting of toasted Georgia pecans.</p>
+          
+          <div class="special-features">
+            <div class="spec-feature-item">
+              <svg class="spec-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+              <span>Single Origin Beans</span>
+            </div>
+            <div class="spec-feature-item">
+              <svg class="spec-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="m9 12 2 2 4-4"></path>
+              </svg>
+              <span>Gluten-Free Friendly</span>
+            </div>
+          </div>
+
+          <div class="special-price-action">
+            <div class="special-price">$6.75</div>
+            <a href="#contact" class="btn btn-primary">Reserve & Order</a>
+          </div>
+          <div class="special-timer" id="special-timer">
+            <svg class="timer-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span>Offer ends in: <strong id="timer-countdown">00h 00m 00s</strong></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="menu-section scroll-reveal" id="menu">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">Exquisite Offerings</span>
+        <h2 class="section-title">Explore Our Menu</h2>
+        <div class="divider"></div>
+      </div>
+
+      <!-- Menu Tabs -->
+      <div class="menu-tabs">
+        <button class="menu-tab-btn active" data-category="coffee">Coffee & Brews</button>
+        <button class="menu-tab-btn" data-category="food">Fresh Food</button>
+        <button class="menu-tab-btn" data-category="desserts">Sweet Desserts</button>
+      </div>
+
+      <!-- Menu Grid -->
+      <div class="menu-grid" id="menu-grid">
+        <!-- COFFEE ITEMS -->
+        <div class="menu-card show" data-category="coffee">
+          <div class="menu-card-header">
+            <h4 class="menu-item-name">Vanilla Bean Latte</h4>
+            <span class="menu-item-price">$5.25</span>
+          </div>
+          <p class="menu-item-desc">Rich double espresso with steamed milk, naturally sweetened with real organic Madagascar vanilla beans.</p>
+          <div class="menu-item-tags">
+            <span class="tag">Warm</span>
+            <span class="tag">Best Seller</span>
+          </div>
+        </div>
+
+        <div class="menu-card show" data-category="coffee">
+          <div class="menu-card-header">
+            <h4 class="menu-item-name">Cold Brew Nitro Float</h4>
+            <span class="menu-item-price">$6.00</span>
+          </div>
+          <p class="menu-item-desc">Slow-steeped smooth nitrogen-infused cold brew, crowned with a scoop of house-made vanilla bean ice cream.</p>
+          <div class="menu-item-tags">
+            <span class="tag">Iced</span>
+            <span class="tag">Premium</span>
+          </div>
+        </div>
+
+        <div class="menu-card show" data-category="coffee">
+          <div class="menu-card-header">
+            <h4 class="menu-item-name">Ethiopian V60 Pour-over</h4>
+            <span class="menu-item-price">$4.75</span>
+          </div>
+          <p class="menu-item-desc">Single-origin heirloom coffee, hand-poured to highlight complex notes of blueberry, jasmine, and citrus acidity.</p>
+          <div class="menu-item-tags">
+            <span class="tag">Pour-over</span>
+            <span class="tag">Organic</span>
+          </div>
+        </div>
+
+        <div class="menu-card show" data-category="coffee">
+          <div class="menu-card-header">
+            <h4 class="menu-item-name">Ceremonial Matcha Latte</h4>
+            <span class="menu-item-price">$5.75</span>
+          </div>
+          <p class="menu-item-desc">Stone-ground Uji matcha whisked traditionally, served with creamy oat milk and a touch of raw wild honey.</p>
+          <div class="menu-item-tags">
+            <span class="tag">Matcha</span>
+            <span class="tag">Vegan Opt</span>
+          </div>
+        </div>
+
+        <!-- FOOD ITEMS -->
+        <div class="menu-card" data-category="food">
+          <div class="menu-card-header">
+            <h4 class="menu-item-name">Sourdough Avocado Toast</h4>
+            <span class="menu-item-price">$12.50</span>
+          </div>
+          <p class="menu-item-desc">Creamy mashed avocado on toasted artisan sourdough, layered with heirloom tomatoes, microgreens, and a soft poached egg.</p>
+          <div class="menu-item-tags">
+            <span class="tag">Breakfast</span>
+            <span class="tag">Vegetarian</span>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="food">
+          <div class="menu-card-header">
+            <h4 class="menu-item-name">Smoked Salmon Bagel</h4>
+            <span class="menu-item-price">$14.00</span>
+          </div>
+          <p class="menu-item-desc">Toasted sesame seed bagel loaded with premium cream cheese, cold-smoked salmon, capers, pickled red onions, and fresh dill.</p>
+          <div class="menu-item-tags">
+            <span class="tag">Signature</span>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="food">
+          <div class="menu-card-header">
+            <h4 class="menu-item-name">Solace Club Sandwich</h4>
+            <span class="menu-item-price">$13.50</span>
+          </div>
+          <p class="menu-item-desc">Layers of roasted turkey breast, crispy maple bacon, fresh butter lettuce, tomatoes, and spicy herb aioli on toasted brioche.</p>
+          <div class="menu-item-tags">
+            <span class="tag">Lunch</span>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="food">
+          <div class="menu-card-header">
+            <h4 class="menu-item-name">Truffled Mushroom Flatbread</h4>
+            <span class="menu-item-price">$15.00</span>
+          </div>
+          <p class="menu-item-desc">Crisp flatbread crust topped with garlic cream, wild forest mushrooms, fresh mozzarella, and a drizzle of white truffle oil.</p>
+          <div class="menu-item-tags">
+            <span class="tag">Specialty</span>
+            <span class="tag">Vegetarian</span>
+          </div>
+        </div>
+
+        <!-- DESSERT ITEMS -->
+        <div class="menu-card" data-category="desserts">
+          <div class="menu-card-header">
+            <h4 class="menu-item-name">Pistachio Rose Cake</h4>
+            <span class="menu-item-price">$7.50</span>
+          </div>
+          <p class="menu-item-desc">Soft, moist sponge cake infused with rose water, topped with smooth pistachio cream and edible rose petals.</p>
+          <div class="menu-item-tags">
+            <span class="tag">Dessert</span>
+            <span class="tag">House Made</span>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="desserts">
+          <div class="menu-card-header">
+            <h4 class="menu-item-name">Warm Lava Brownie</h4>
+            <span class="menu-item-price">$6.75</span>
+          </div>
+          <p class="menu-item-desc">Rich dark chocolate fudge brownie with a molten core, served warm with a scoop of salted caramel gelato.</p>
+          <div class="menu-item-tags">
+            <span class="tag">Warm</span>
+            <span class="tag">Gluten-Free</span>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="desserts">
+          <div class="menu-card-header">
+            <h4 class="menu-item-name">Classic Espresso Tiramisu</h4>
+            <span class="menu-item-price">$8.00</span>
+          </div>
+          <p class="menu-item-desc">Ladyfingers soaked in our signature house-blend espresso, layered with premium mascarpone cream and cocoa dust.</p>
+          <div class="menu-item-tags">
+            <span class="tag">Coffee Infused</span>
+            <span class="tag">Best Seller</span>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="desserts">
+          <div class="menu-card-header">
+            <h4 class="menu-item-name">Lemon Elderflower Tart</h4>
+            <span class="menu-item-price">$7.00</span>
+          </div>
+          <p class="menu-item-desc">Zesty lemon curd filled in a buttery pastry shell, sweetened with delicate notes of elderflower liqueur, topped with meringue.</p>
+          <div class="menu-item-tags">
+            <span class="tag">Tangy</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Story Section -->
+  <section class="about-section scroll-reveal" id="about">
+    <div class="container about-grid">
+      <div class="about-content">
+        <span class="section-subtitle">Our Journey</span>
+        <h2 class="section-title">The Art of Solace</h2>
+        <div class="divider"></div>
+        <p class="about-text">Founded in 2026, Café Solace was born out of a simple dream: to create a cozy, premium refuge away from the hectic rush of everyday life. Our name reflects our commitment to being your sanctuary, offering a warm and inviting atmosphere where you can pause, breathe, and enjoy life's small pleasures.</p>
+        <p class="about-text">We source only the finest single-origin beans, ethically harvested from small-scale farms in Ethiopia, Colombia, and Sumatra. Each batch is micro-roasted in-house weekly to bring out its distinctive character. Complementing our craft coffee is a curated menu of food and pastries, baked fresh daily by local culinary artists.</p>
+        <a href="#contact" class="btn btn-primary">Book a Table</a>
+      </div>
+      <div class="about-image-container">
+        <img src="assets/about_story.png" alt="Barista brewing coffee at Café Solace" class="about-img" loading="lazy">
+        <div class="about-experience-badge">
+          <span class="badge-num">100%</span>
+          <span class="badge-lbl">Organic Beans</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery-section scroll-reveal" id="gallery">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">Visual Moments</span>
+        <h2 class="section-title">Our Cozy Space</h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="assets/gallery1.png" alt="Cozy window seat in a cafe" loading="lazy" class="gallery-img">
+          <div class="gallery-overlay">
+            <span class="gallery-zoom-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/gallery2.png" alt="Freshly baked croissants and bakery displays" loading="lazy" class="gallery-img">
+          <div class="gallery-overlay">
+            <span class="gallery-zoom-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/gallery3.png" alt="Pour-over coffee brewing extraction" loading="lazy" class="gallery-img">
+          <div class="gallery-overlay">
+            <span class="gallery-zoom-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/gallery4.png" alt="Ceremonial matcha latte art leaf" loading="lazy" class="gallery-img">
+          <div class="gallery-overlay">
+            <span class="gallery-zoom-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/gallery5.png" alt="Fresh sourdough avocado toast plate" loading="lazy" class="gallery-img">
+          <div class="gallery-overlay">
+            <span class="gallery-zoom-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/gallery6.png" alt="Outdoor cafe bistro seating" loading="lazy" class="gallery-img">
+          <div class="gallery-overlay">
+            <span class="gallery-zoom-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section scroll-reveal" id="testimonials">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">Guest Experience</span>
+        <h2 class="section-title">Solace Stories</h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="testimonials-carousel-wrapper">
+        <div class="testimonials-carousel" id="testimonials-carousel">
+          
+          <div class="testimonial-slide active">
+            <div class="testimonial-avatar" style="background-color: var(--accent-secondary);">EV</div>
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">"Café Solace is my absolute favorite place in the city. The warm atmosphere, earthy aesthetics, and the pour-over coffee are top tier. It's the perfect environment to read a book or write."</p>
+            <h5 class="testimonial-author">Eleanor Vance</h5>
+            <span class="testimonial-status">Regular Guest</span>
+          </div>
+
+          <div class="testimonial-slide">
+            <div class="testimonial-avatar" style="background-color: var(--accent-primary);">LH</div>
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">"That Salted Caramel Pecan Latte is legendary. You can taste the quality of their beans in every sip, and the baked croissants melt in your mouth. Truly premium service!"</p>
+            <h5 class="testimonial-author">Liam Harrison</h5>
+            <span class="testimonial-status">Coffee Enthusiast</span>
+          </div>
+
+          <div class="testimonial-slide">
+            <div class="testimonial-avatar" style="background-color: #A06B43;">SA</div>
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">"The dark mode aesthetic matches the cozy design perfectly! The staff is incredibly friendly and welcoming. Hands down, the best sourdough club sandwich around."</p>
+            <h5 class="testimonial-author">Sophia Alistair</h5>
+            <span class="testimonial-status">Local Customer</span>
+          </div>
+        </div>
+
+        <button class="carousel-control prev" id="carousel-prev" aria-label="Previous Testimonial">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <button class="carousel-control next" id="carousel-next" aria-label="Next Testimonial">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+
+        <div class="carousel-indicators" id="carousel-indicators">
+          <span class="indicator active" data-slide="0"></span>
+          <span class="indicator" data-slide="1"></span>
+          <span class="indicator" data-slide="2"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Hours Section -->
+  <section class="location-section scroll-reveal" id="location">
+    <div class="container location-grid">
+      <!-- Info / Opening Hours -->
+      <div class="location-info">
+        <span class="section-subtitle">Visit Us</span>
+        <h2 class="section-title">Hours & Location</h2>
+        <div class="divider"></div>
+        <p class="location-desc">Step into our cozy haven. We are located right in the heart of downtown Brewtown, with convenient street parking and outdoor seating options.</p>
+        
+        <div class="hours-list">
+          <div class="hours-row">
+            <span class="day">Monday - Friday</span>
+            <span class="time">7:00 AM - 9:00 PM</span>
+          </div>
+          <div class="hours-row">
+            <span class="day">Saturday</span>
+            <span class="time">8:00 AM - 10:00 PM</span>
+          </div>
+          <div class="hours-row">
+            <span class="day">Sunday</span>
+            <span class="time">8:00 AM - 8:00 PM</span>
+          </div>
+        </div>
+
+        <div class="contact-details">
+          <div class="contact-item">
+            <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>123 Serenity Lane, Brewtown, CA 90210</span>
+          </div>
+          <div class="contact-item">
+            <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92Z"></path>
+            </svg>
+            <span>+1 (234) 567-890</span>
+          </div>
+          <div class="contact-item">
+            <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+            </svg>
+            <span>hello@cafesolace.com</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Custom Styled Map Card (Highly Premium Place Holder) -->
+      <div class="map-container">
+        <!-- We style this beautifully to act as an aesthetic map mockup with coordinates, address, and interactive hover effects. -->
+        <div class="map-card">
+          <div class="map-pin-pulse"></div>
+          <div class="map-overlay-details">
+            <h5>Café Solace</h5>
+            <p>123 Serenity Lane</p>
+            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">Get Directions</a>
+          </div>
+          <div class="map-grid-aesthetic"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reservation & Contact Section -->
+  <section class="contact-section scroll-reveal" id="contact">
+    <div class="container">
+      <div class="contact-box">
+        <div class="section-header text-center">
+          <span class="section-subtitle">Reserve a Table</span>
+          <h2 class="section-title">Join Us For Coffee</h2>
+          <div class="divider"></div>
+          <p class="contact-intro">Fill out the reservation form below and we will confirm your table shortly. Walk-ins are always welcome, but booking ensures your perfect cozy spot.</p>
+        </div>
+
+        <form id="reservation-form" class="reservation-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="res-name">Full Name</label>
+              <input type="text" id="res-name" name="name" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="res-email">Email Address</label>
+              <input type="email" id="res-email" name="email" placeholder="john@example.com" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="res-phone">Phone Number</label>
+              <input type="tel" id="res-phone" name="phone" placeholder="(123) 456-7890" required>
+            </div>
+            <div class="form-group">
+              <label for="res-guests">Number of Guests</label>
+              <select id="res-guests" name="guests" required>
+                <option value="1">1 Guest</option>
+                <option value="2" selected>2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6+ Guests (Party)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="res-date">Date</label>
+              <input type="date" id="res-date" name="date" required>
+            </div>
+            <div class="form-group">
+              <label for="res-time">Preferred Time</label>
+              <select id="res-time" name="time" required>
+                <option value="08:00 AM">8:00 AM</option>
+                <option value="10:00 AM">10:00 AM</option>
+                <option value="12:00 PM">12:00 PM</option>
+                <option value="02:00 PM">2:00 PM</option>
+                <option value="04:00 PM">4:00 PM</option>
+                <option value="06:00 PM">6:00 PM</option>
+                <option value="08:00 PM">8:00 PM</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="res-notes">Special Requests / Notes</label>
+            <textarea id="res-notes" name="notes" placeholder="Any allergies, birthday celebrations, window table preference..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
+            <span class="btn-text">Confirm Reservation</span>
+            <span class="btn-loader hidden"></span>
+          </button>
+
+          <!-- Form Message Alerts -->
+          <div id="form-alert" class="form-alert hidden"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <!-- About / Description -->
+      <div class="footer-col footer-about">
+        <a href="#" class="logo footer-logo">
+          <span class="logo-text">Solace</span><span class="logo-dot">.</span>
+        </a>
+        <p class="footer-desc">Crafting cozy experiences, premium roasts, and artisan pastries. Make Café Solace your serene space for community and conversation.</p>
+        <!-- Social Icons -->
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="#" aria-label="Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+            </svg>
+          </a>
+          <a href="#" aria-label="Yelp">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m12 3-1.912 5.813a2 2 0 0 1-1.9 1.375H2.078L7 13.75l-1.912 5.813a2 2 0 0 0 3.075 2.234L12 18l3.837 3.797a2 2 0 0 0 3.075-2.234L17 13.75l4.922-3.562h-6.11a2 2 0 0 1-1.9-1.375z"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col footer-links">
+        <h5 class="footer-title">Quick Links</h5>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#menu">Our Menu</a></li>
+          <li><a href="#special">Master Special</a></li>
+          <li><a href="#about">Our Story</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Reservations</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter Signup -->
+      <div class="footer-col footer-newsletter">
+        <h5 class="footer-title">Newsletter</h5>
+        <p>Subscribe to receive roasting updates, event notifications, and member discounts.</p>
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" placeholder="Your email address" required aria-label="Newsletter Email Address">
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <div id="newsletter-alert" class="newsletter-alert hidden"></div>
+      </div>
+    </div>
+
+    <!-- Copyright and Legal -->
+    <div class="footer-bottom text-center">
+      <p>&copy; 2026 Café Solace. All Rights Reserved. Crafted with care for coffee lovers by <a href="#" style="text-decoration: underline; color: var(--accent-primary); font-weight: 600; transition: color var(--transition-fast);">Tejdeep</a>.</p>
+    </div>
+  </footer>
+
+  <!-- Floating Widgets -->
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with Café Solace on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+      <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+    </svg>
+    <span class="whatsapp-tooltip">Chat with us!</span>
+  </a>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to Top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close Lightbox">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous Image">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+    <div class="lightbox-content">
+      <img src="" alt="" id="lightbox-img">
+      <div class="lightbox-caption" id="lightbox-caption">Image Caption</div>
+    </div>
+    <button class="lightbox-next" id="lightbox-next" aria-label="Next Image">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
