@@ -51,32 +51,32 @@
       "image": "https://cafesolace.com/assets/hero_bg.png",
       "@id": "https://cafesolace.com",
       "url": "https://cafesolace.com",
-      "telephone": "+1234567890",
+      "telephone": "+91 99999 99999",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "123 Serenity Lane",
-        "addressLocality": "Brewtown",
-        "addressRegion": "CA",
-        "postalCode": "90210",
-        "addressCountry": "US"
+        "streetAddress": "Road No. 36, Jubilee Hills",
+        "addressLocality": "Hyderabad",
+        "addressRegion": "Telangana",
+        "postalCode": "500033",
+        "addressCountry": "IN"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 34.0522,
-        "longitude": -118.2437
+        "latitude": 17.4343,
+        "longitude": 78.4116
       },
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
           "opens": "07:00",
-          "closes": "21:00"
+          "closes": "22:00"
         },
         {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": ["Saturday", "Sunday"],
           "opens": "08:00",
-          "closes": "22:00"
+          "closes": "23:00"
         }
       ],
       "menu": "https://cafesolace.com#menu",
@@ -107,6 +107,7 @@
         <a href="#menu" class="nav-link">Menu</a>
         <a href="#special" class="nav-link">Special</a>
         <a href="#about" class="nav-link">Our Story</a>
+        <a href="#events" class="nav-link">Events</a>
         <a href="#gallery" class="nav-link">Gallery</a>
         <a href="#location" class="nav-link">Find Us</a>
         <a href="#contact" class="nav-link">Contact</a>
@@ -162,6 +163,7 @@
       <a href="#menu" class="drawer-link">Menu</a>
       <a href="#special" class="drawer-link">Special</a>
       <a href="#about" class="drawer-link">Our Story</a>
+      <a href="#events" class="drawer-link">Events</a>
       <a href="#gallery" class="drawer-link">Gallery</a>
       <a href="#location" class="drawer-link">Find Us</a>
       <a href="#contact" class="drawer-link">Contact</a>
@@ -171,18 +173,75 @@
   <div class="drawer-overlay" id="drawer-overlay"></div>
 
   <!-- Hero Section -->
-  <section class="hero scroll-reveal" id="hero" style="background-image: linear-gradient(rgba(45, 30, 21, 0.6), rgba(45, 30, 21, 0.7)), url('assets/hero_bg.png');">
-    <div class="hero-content container">
-      <span class="hero-subtitle">Est. 2026</span>
-      <h1 class="hero-title">Your Sanctuary for Exquisite Coffee</h1>
-      <p class="hero-desc">Indulge in roasted-to-perfection beans, hand-crafted artisan beverages, and delectable warm pastries, wrapped in the comforting embrace of Café Solace.</p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">Reserve a Table</a>
-        <a href="#menu" class="btn btn-secondary">Explore Menu</a>
+  <section class="hero scroll-reveal" id="hero" style="background-image: linear-gradient(rgba(45, 30, 21, 0.75), rgba(45, 30, 21, 0.85)), url('assets/hero_bg.png');">
+    <div class="hero-container container">
+      <div class="hero-content">
+        <span class="hero-subtitle">Est. 2026</span>
+        <h1 class="hero-title">Your Sanctuary for Exquisite Coffee</h1>
+        <p class="hero-desc">Indulge in roasted-to-perfection beans, hand-crafted artisan beverages, and delectable warm pastries, wrapped in the comforting embrace of Café Solace.</p>
+        
+        <!-- Trust Badge & Google Review Badge -->
+        <div class="hero-trust-row">
+          <div class="hero-trust">
+            <div class="trust-stars">⭐⭐⭐⭐⭐</div>
+            <span class="trust-text"><strong>4.9/5</strong> Rating &bull; <strong>500+</strong> Happy Guests</span>
+          </div>
+          <div class="google-badge">
+            <div class="google-badge-header">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+              </svg>
+              <span class="google-stars">★★★★★</span>
+            </div>
+            <span class="google-badge-text">Verified on Google</span>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Book a Table</a>
+          <a href="#menu" class="btn btn-secondary">Explore Menu</a>
+        </div>
       </div>
-      <div class="hero-trust">
-        <div class="trust-stars">★★★★★</div>
-        <span class="trust-text">Rated 4.9/5 by 500+ Coffee Lovers</span>
+
+      <!-- Hero Mini Reservation Widget -->
+      <div class="hero-widget-wrapper">
+        <div class="hero-widget-card">
+          <h4>Reserve a Table</h4>
+          <p>Quick booking widget (UI only)</p>
+          <div class="widget-row">
+            <div class="widget-group">
+              <label for="widget-date">Date</label>
+              <input type="date" id="widget-date">
+            </div>
+            <div class="widget-group">
+              <label for="widget-guests">Guests</label>
+              <select id="widget-guests">
+                <option value="1">1 Guest</option>
+                <option value="2" selected>2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6+ Guests</option>
+              </select>
+            </div>
+          </div>
+          <div class="widget-group">
+            <label for="widget-time">Preferred Time</label>
+            <select id="widget-time">
+              <option value="08:00 AM">8:00 AM</option>
+              <option value="10:00 AM">10:00 AM</option>
+              <option value="12:00 PM">12:00 PM</option>
+              <option value="02:00 PM">2:00 PM</option>
+              <option value="04:00 PM">4:00 PM</option>
+              <option value="06:00 PM" selected>6:00 PM</option>
+              <option value="08:00 PM">8:00 PM</option>
+            </select>
+          </div>
+          <button type="button" class="btn btn-primary btn-block" id="hero-widget-submit-btn">Reserve Table</button>
+        </div>
       </div>
     </div>
     <div class="hero-scroll-indicator">
@@ -191,6 +250,19 @@
           <polyline points="6 9 12 15 18 9"></polyline>
         </svg>
       </a>
+    </div>
+  </section>
+
+  <!-- Featured In Strip -->
+  <section class="featured-strip">
+    <div class="container featured-container">
+      <span class="featured-title">As Featured In</span>
+      <div class="featured-logos">
+        <span class="featured-logo">Hyderabad Times</span>
+        <span class="featured-logo">LBB Hyderabad</span>
+        <span class="featured-logo">What's Hot</span>
+        <span class="featured-logo">Coffee Culture India</span>
+      </div>
     </div>
   </section>
 
@@ -264,7 +336,8 @@
       <!-- Menu Grid -->
       <div class="menu-grid" id="menu-grid">
         <!-- COFFEE ITEMS -->
-        <div class="menu-card show" data-category="coffee">
+        <div class="menu-card show menu-card-has-badge" data-category="coffee">
+          <span class="menu-card-badge">BESTSELLER</span>
           <div class="menu-card-header">
             <h4 class="menu-item-name">Vanilla Bean Latte</h4>
             <span class="menu-item-price">$5.25</span>
@@ -272,7 +345,6 @@
           <p class="menu-item-desc">Rich double espresso with steamed milk, naturally sweetened with real organic Madagascar vanilla beans.</p>
           <div class="menu-item-tags">
             <span class="tag">Warm</span>
-            <span class="tag">Best Seller</span>
           </div>
         </div>
 
@@ -325,7 +397,8 @@
           </div>
         </div>
 
-        <div class="menu-card" data-category="food">
+        <div class="menu-card menu-card-has-badge" data-category="food">
+          <span class="menu-card-badge">BESTSELLER</span>
           <div class="menu-card-header">
             <h4 class="menu-item-name">Smoked Salmon Bagel</h4>
             <span class="menu-item-price">$14.00</span>
@@ -384,7 +457,8 @@
           </div>
         </div>
 
-        <div class="menu-card" data-category="desserts">
+        <div class="menu-card menu-card-has-badge" data-category="desserts">
+          <span class="menu-card-badge highlight-badge">MOST ORDERED</span>
           <div class="menu-card-header">
             <h4 class="menu-item-name">Classic Espresso Tiramisu</h4>
             <span class="menu-item-price">$8.00</span>
@@ -392,7 +466,6 @@
           <p class="menu-item-desc">Ladyfingers soaked in our signature house-blend espresso, layered with premium mascarpone cream and cocoa dust.</p>
           <div class="menu-item-tags">
             <span class="tag">Coffee Infused</span>
-            <span class="tag">Best Seller</span>
           </div>
         </div>
 
@@ -426,6 +499,55 @@
         <div class="about-experience-badge">
           <span class="badge-num">100%</span>
           <span class="badge-lbl">Organic Beans</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section class="events-section scroll-reveal" id="events">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">Happening at Solace</span>
+        <h2 class="section-title">Weekly Events & Gatherings</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="events-grid">
+        <!-- Event 1 -->
+        <div class="event-card">
+          <div class="event-img-wrapper">
+            <img src="assets/gallery6.png" alt="Live Music Fridays" class="event-img" loading="lazy">
+            <span class="event-date-badge">Every Friday &bull; 7:30 PM</span>
+          </div>
+          <div class="event-info">
+            <h3 class="event-title">Live Acoustic Fridays</h3>
+            <p class="event-desc">Unwind your week with soul-stirring live acoustic sets by local Hyderabad independent artists. Cozy candlelit setting, premium coffee, and beautiful music.</p>
+            <a href="#contact" class="event-link">Reserve a Table &rarr;</a>
+          </div>
+        </div>
+        <!-- Event 2 -->
+        <div class="event-card">
+          <div class="event-img-wrapper">
+            <img src="assets/gallery3.png" alt="Coffee Tasting Masterclass" class="event-img" loading="lazy">
+            <span class="event-date-badge">Saturdays &bull; 4:00 PM</span>
+          </div>
+          <div class="event-info">
+            <h3 class="event-title">Coffee Tasting Masterclass</h3>
+            <p class="event-desc">Join our lead barista for an exclusive journey through single-origin brews. Learn to differentiate aroma, acidity, body, and notes of premium beans.</p>
+            <a href="#contact" class="event-link">Reserve a Table &rarr;</a>
+          </div>
+        </div>
+        <!-- Event 3 -->
+        <div class="event-card">
+          <div class="event-img-wrapper">
+            <img src="assets/gallery1.png" alt="Private Gatherings" class="event-img" loading="lazy">
+            <span class="event-date-badge">By Booking Only</span>
+          </div>
+          <div class="event-info">
+            <h3 class="event-title">Cozy Private Gatherings</h3>
+            <p class="event-desc">Book our aesthetic space for intimate birthday celebrations, book clubs, creative workshops, or private reunions. Custom menus and setups available.</p>
+            <a href="#contact" class="event-link">Inquire Now &rarr;</a>
+          </div>
         </div>
       </div>
     </div>
@@ -528,58 +650,149 @@
     </div>
   </section>
 
+  <!-- Instagram Section -->
+  <section class="instagram-section scroll-reveal" id="instagram">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">Social Feed</span>
+        <h2 class="section-title">Follow Us On Instagram</h2>
+        <a href="https://instagram.com/cafesolace" target="_blank" rel="noopener noreferrer" class="insta-handle">@cafesolace</a>
+        <div class="divider"></div>
+      </div>
+      <div class="instagram-grid">
+        <div class="instagram-item">
+          <img src="assets/gallery1.png" alt="Aesthetic cafe window seat" loading="lazy" class="instagram-img">
+          <div class="instagram-overlay">
+            <span class="instagram-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="instagram-item">
+          <img src="assets/gallery2.png" alt="Fresh bakery display and croissants" loading="lazy" class="instagram-img">
+          <div class="instagram-overlay">
+            <span class="instagram-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="instagram-item">
+          <img src="assets/gallery3.png" alt="Pour over coffee drip extraction" loading="lazy" class="instagram-img">
+          <div class="instagram-overlay">
+            <span class="instagram-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="instagram-item">
+          <img src="assets/gallery4.png" alt="Ceremonial matcha latte art" loading="lazy" class="instagram-img">
+          <div class="instagram-overlay">
+            <span class="instagram-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="instagram-item">
+          <img src="assets/gallery5.png" alt="Sourdough avocado toast closeup" loading="lazy" class="instagram-img">
+          <div class="instagram-overlay">
+            <span class="instagram-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="instagram-item">
+          <img src="assets/gallery6.png" alt="Bistro outdoor cafe space" loading="lazy" class="instagram-img">
+          <div class="instagram-overlay">
+            <span class="instagram-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="instagram-btn-wrapper text-center">
+        <a href="https://instagram.com/cafesolace" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px; margin-right: 8px;">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          Follow @CafeSolace
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- Testimonials Section -->
   <section class="testimonials-section scroll-reveal" id="testimonials">
     <div class="container">
       <div class="section-header text-center">
         <span class="section-subtitle">Guest Experience</span>
-        <h2 class="section-title">Solace Stories</h2>
+        <h2 class="section-title">Customer Reviews</h2>
         <div class="divider"></div>
       </div>
 
-      <div class="testimonials-carousel-wrapper">
-        <div class="testimonials-carousel" id="testimonials-carousel">
-          
-          <div class="testimonial-slide active">
-            <div class="testimonial-avatar" style="background-color: var(--accent-secondary);">EV</div>
-            <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-quote">"Café Solace is my absolute favorite place in the city. The warm atmosphere, earthy aesthetics, and the pour-over coffee are top tier. It's the perfect environment to read a book or write."</p>
-            <h5 class="testimonial-author">Eleanor Vance</h5>
-            <span class="testimonial-status">Regular Guest</span>
+      <div class="reviews-grid">
+        <!-- Card 1 -->
+        <div class="review-card-item">
+          <div class="review-card-header-info">
+            <div class="review-avatar" style="background-color: var(--accent-secondary);">SM</div>
+            <div>
+              <h5 class="review-author">Sarah M.</h5>
+              <span class="review-status">Local Guide &bull; Hyderabad</span>
+            </div>
           </div>
-
-          <div class="testimonial-slide">
-            <div class="testimonial-avatar" style="background-color: var(--accent-primary);">LH</div>
-            <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-quote">"That Salted Caramel Pecan Latte is legendary. You can taste the quality of their beans in every sip, and the baked croissants melt in your mouth. Truly premium service!"</p>
-            <h5 class="testimonial-author">Liam Harrison</h5>
-            <span class="testimonial-status">Coffee Enthusiast</span>
-          </div>
-
-          <div class="testimonial-slide">
-            <div class="testimonial-avatar" style="background-color: #A06B43;">SA</div>
-            <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-quote">"The dark mode aesthetic matches the cozy design perfectly! The staff is incredibly friendly and welcoming. Hands down, the best sourdough club sandwich around."</p>
-            <h5 class="testimonial-author">Sophia Alistair</h5>
-            <span class="testimonial-status">Local Customer</span>
-          </div>
+          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <p class="review-quote">"Best cappuccino in Hyderabad. The espresso is incredibly smooth, and the warm croissants melt in your mouth. The ambiance is perfect for remote working, and the design is stunning!"</p>
         </div>
 
-        <button class="carousel-control prev" id="carousel-prev" aria-label="Previous Testimonial">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="15 18 9 12 15 6"></polyline>
-          </svg>
-        </button>
-        <button class="carousel-control next" id="carousel-next" aria-label="Next Testimonial">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
-        </button>
+        <!-- Card 2 -->
+        <div class="review-card-item">
+          <div class="review-card-header-info">
+            <div class="review-avatar" style="background-color: var(--accent-primary);">EV</div>
+            <div>
+              <h5 class="review-author">Eleanor Vance</h5>
+              <span class="review-status">Regular Guest</span>
+            </div>
+          </div>
+          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <p class="review-quote">"Café Solace is my absolute favorite place in the city. The warm atmosphere, earthy aesthetics, and the pour-over coffee are top tier. It's the perfect environment to read a book or write."</p>
+        </div>
 
-        <div class="carousel-indicators" id="carousel-indicators">
-          <span class="indicator active" data-slide="0"></span>
-          <span class="indicator" data-slide="1"></span>
-          <span class="indicator" data-slide="2"></span>
+        <!-- Card 3 -->
+        <div class="review-card-item">
+          <div class="review-card-header-info">
+            <div class="review-avatar" style="background-color: #A06B43;">LH</div>
+            <div>
+              <h5 class="review-author">Liam Harrison</h5>
+              <span class="review-status">Coffee Enthusiast</span>
+            </div>
+          </div>
+          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <p class="review-quote">"That Salted Caramel Pecan Latte is legendary. You can taste the quality of their beans in every sip, and the baked croissants melt in your mouth. Truly premium service!"</p>
         </div>
       </div>
     </div>
@@ -593,20 +806,19 @@
         <span class="section-subtitle">Visit Us</span>
         <h2 class="section-title">Hours & Location</h2>
         <div class="divider"></div>
-        <p class="location-desc">Step into our cozy haven. We are located right in the heart of downtown Brewtown, with convenient street parking and outdoor seating options.</p>
+        <p class="location-desc">Step into our cozy haven. We are located right in the heart of Jubilee Hills, with convenient parking and beautiful indoor-outdoor seating options.</p>
         
-        <div class="hours-list">
-          <div class="hours-row">
-            <span class="day">Monday - Friday</span>
-            <span class="time">7:00 AM - 9:00 PM</span>
-          </div>
-          <div class="hours-row">
-            <span class="day">Saturday</span>
-            <span class="time">8:00 AM - 10:00 PM</span>
-          </div>
-          <div class="hours-row">
-            <span class="day">Sunday</span>
-            <span class="time">8:00 AM - 8:00 PM</span>
+        <div class="hours-card">
+          <h3 class="hours-card-title">Opening Hours</h3>
+          <div class="hours-list">
+            <div class="hours-row">
+              <span class="day">Monday - Friday</span>
+              <span class="time">7:00 AM - 10:00 PM</span>
+            </div>
+            <div class="hours-row">
+              <span class="day">Saturday - Sunday</span>
+              <span class="time">8:00 AM - 11:00 PM</span>
+            </div>
           </div>
         </div>
 
@@ -616,13 +828,13 @@
               <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
               <circle cx="12" cy="10" r="3"></circle>
             </svg>
-            <span>123 Serenity Lane, Brewtown, CA 90210</span>
+            <span>Road No. 36, Jubilee Hills, Hyderabad, Telangana 500033</span>
           </div>
           <div class="contact-item">
             <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92Z"></path>
             </svg>
-            <span>+1 (234) 567-890</span>
+            <span>+91 99999 99999</span>
           </div>
           <div class="contact-item">
             <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -634,18 +846,9 @@
         </div>
       </div>
 
-      <!-- Custom Styled Map Card (Highly Premium Place Holder) -->
+      <!-- Real Google Maps Embed -->
       <div class="map-container">
-        <!-- We style this beautifully to act as an aesthetic map mockup with coordinates, address, and interactive hover effects. -->
-        <div class="map-card">
-          <div class="map-pin-pulse"></div>
-          <div class="map-overlay-details">
-            <h5>Café Solace</h5>
-            <p>123 Serenity Lane</p>
-            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">Get Directions</a>
-          </div>
-          <div class="map-grid-aesthetic"></div>
-        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.030588691515!2d78.4116035!3d17.4343135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9135f0f3531b%3A0xcab5e6677f525547!2sJubilee%20Hills%2C%20Hyderabad%2C%20Telangana%20500033!5e0!3m2!1sen!2sin!4v1718430000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </section>
@@ -661,68 +864,90 @@
           <p class="contact-intro">Fill out the reservation form below and we will confirm your table shortly. Walk-ins are always welcome, but booking ensures your perfect cozy spot.</p>
         </div>
 
-        <form id="reservation-form" class="reservation-form">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="res-name">Full Name</label>
-              <input type="text" id="res-name" name="name" placeholder="John Doe" required>
-            </div>
-            <div class="form-group">
-              <label for="res-email">Email Address</label>
-              <input type="email" id="res-email" name="email" placeholder="john@example.com" required>
-            </div>
+        <div class="booking-grid">
+          <!-- Left: Standard Form -->
+          <div class="booking-form-wrapper">
+            <form id="reservation-form" class="reservation-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="res-name">Full Name</label>
+                  <input type="text" id="res-name" name="name" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                  <label for="res-email">Email Address</label>
+                  <input type="email" id="res-email" name="email" placeholder="john@example.com" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="res-phone">Phone Number</label>
+                  <input type="tel" id="res-phone" name="phone" placeholder="99999 99999" required>
+                </div>
+                <div class="form-group">
+                  <label for="res-guests">Number of Guests</label>
+                  <select id="res-guests" name="guests" required>
+                    <option value="1">1 Guest</option>
+                    <option value="2" selected>2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                    <option value="5">5 Guests</option>
+                    <option value="6">6+ Guests (Party)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="res-date">Date</label>
+                  <input type="date" id="res-date" name="date" required>
+                </div>
+                <div class="form-group">
+                  <label for="res-time">Preferred Time</label>
+                  <select id="res-time" name="time" required>
+                    <option value="08:00 AM">8:00 AM</option>
+                    <option value="10:00 AM">10:00 AM</option>
+                    <option value="12:00 PM">12:00 PM</option>
+                    <option value="02:00 PM">2:00 PM</option>
+                    <option value="04:00 PM">4:00 PM</option>
+                    <option value="06:00 PM" selected>6:00 PM</option>
+                    <option value="08:00 PM">8:00 PM</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="res-notes">Special Requests / Notes</label>
+                <textarea id="res-notes" name="notes" placeholder="Any allergies, birthday celebrations, window table preference..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
+                <span class="btn-text">Confirm Reservation</span>
+                <span class="btn-loader hidden"></span>
+              </button>
+
+              <!-- Form Message Alerts -->
+              <div id="form-alert" class="form-alert hidden"></div>
+            </form>
           </div>
 
-          <div class="form-row">
-            <div class="form-group">
-              <label for="res-phone">Phone Number</label>
-              <input type="tel" id="res-phone" name="phone" placeholder="(123) 456-7890" required>
-            </div>
-            <div class="form-group">
-              <label for="res-guests">Number of Guests</label>
-              <select id="res-guests" name="guests" required>
-                <option value="1">1 Guest</option>
-                <option value="2" selected>2 Guests</option>
-                <option value="3">3 Guests</option>
-                <option value="4">4 Guests</option>
-                <option value="5">5 Guests</option>
-                <option value="6">6+ Guests (Party)</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="res-date">Date</label>
-              <input type="date" id="res-date" name="date" required>
-            </div>
-            <div class="form-group">
-              <label for="res-time">Preferred Time</label>
-              <select id="res-time" name="time" required>
-                <option value="08:00 AM">8:00 AM</option>
-                <option value="10:00 AM">10:00 AM</option>
-                <option value="12:00 PM">12:00 PM</option>
-                <option value="02:00 PM">2:00 PM</option>
-                <option value="04:00 PM">4:00 PM</option>
-                <option value="06:00 PM">6:00 PM</option>
-                <option value="08:00 PM">8:00 PM</option>
-              </select>
+          <!-- Right: WhatsApp Side CTA -->
+          <div class="booking-wa-sidebar">
+            <div class="booking-wa-card">
+              <div class="wa-icon-large">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+                  <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+                </svg>
+              </div>
+              <h3>Prefer WhatsApp?</h3>
+              <p>Book your table instantly on WhatsApp. Avoid filling forms and chat directly with our guest relationship executive.</p>
+              <a href="https://wa.me/919999999999?text=Hi%20Caf%C3%A9%20Solace%2C%20I'd%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="btn btn-primary wa-direct-booking-btn">
+                <span>Book on WhatsApp</span>
+              </a>
+              <span class="wa-badge-subtext">Average Response Time: <strong>Under 15 Mins</strong></span>
             </div>
           </div>
-
-          <div class="form-group">
-            <label for="res-notes">Special Requests / Notes</label>
-            <textarea id="res-notes" name="notes" placeholder="Any allergies, birthday celebrations, window table preference..."></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
-            <span class="btn-text">Confirm Reservation</span>
-            <span class="btn-loader hidden"></span>
-          </button>
-
-          <!-- Form Message Alerts -->
-          <div id="form-alert" class="form-alert hidden"></div>
-        </form>
+        </div>
       </div>
     </div>
   </section>
@@ -736,6 +961,7 @@
           <span class="logo-text">Solace</span><span class="logo-dot">.</span>
         </a>
         <p class="footer-desc">Crafting cozy experiences, premium roasts, and artisan pastries. Make Café Solace your serene space for community and conversation.</p>
+        <p class="footer-social-proof">Trusted by 5,000+ coffee lovers across Hyderabad.</p>
         <!-- Social Icons -->
         <div class="social-links">
           <a href="#" aria-label="Facebook">
@@ -795,12 +1021,12 @@
   </footer>
 
   <!-- Floating Widgets -->
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with Café Solace on WhatsApp">
+  <!-- WhatsApp Floating Pill Button -->
+  <a href="https://wa.me/919999999999?text=Hi%20Caf%C3%A9%20Solace%2C%20I'd%20like%20to%20reserve%20a%20table." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with Café Solace on WhatsApp">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
       <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
     </svg>
-    <span class="whatsapp-tooltip">Chat with us!</span>
+    <span class="whatsapp-float-text">Order on WhatsApp</span>
   </a>
 
   <!-- Back to Top Button -->
@@ -809,6 +1035,14 @@
       <polyline points="18 15 12 9 6 15"></polyline>
     </svg>
   </button>
+
+  <!-- Mobile Sticky Reserve CTA -->
+  <div class="mobile-sticky-cta" id="mobile-sticky-cta">
+    <a href="#contact" class="btn btn-primary btn-block">Reserve Table</a>
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toast-container" class="toast-container"></div>
 
   <!-- Lightbox Modal -->
   <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog">

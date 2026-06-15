@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ==========================================
-     7. Testimonials Carousel
+     7. Testimonials Carousel (Safe Null Checked)
      ========================================== */
   const testimonialCarousel = document.getElementById('testimonials-carousel');
   const slides = document.querySelectorAll('.testimonial-slide');
@@ -255,85 +255,89 @@ document.addEventListener('DOMContentLoaded', () => {
   const nextBtn = document.getElementById('carousel-next');
   const indicatorsContainer = document.getElementById('carousel-indicators');
   
-  let currentSlide = 0;
-  let autoplayTimer;
-  const autoplayDuration = 6000; // 6 seconds
+  if (testimonialCarousel && prevBtn && nextBtn && indicatorsContainer) {
+    let currentSlide = 0;
+    let autoplayTimer;
+    const autoplayDuration = 6000; // 6 seconds
 
-  const updateCarousel = (index) => {
-    currentSlide = index;
-    
-    // Shift track
-    testimonialCarousel.style.transform = `translateX(-${currentSlide * 100}%)`;
-    
-    // Set active class on slides for animation
-    slides.forEach((slide, idx) => {
-      slide.classList.remove('active');
-      if (idx === currentSlide) {
-        slide.classList.add('active');
-      }
-    });
+    const updateCarousel = (index) => {
+      currentSlide = index;
+      
+      // Shift track
+      testimonialCarousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+      
+      // Set active class on slides for animation
+      slides.forEach((slide, idx) => {
+        slide.classList.remove('active');
+        if (idx === currentSlide) {
+          slide.classList.add('active');
+        }
+      });
 
-    // Update indicator dots
-    const indicators = indicatorsContainer.querySelectorAll('.indicator');
-    indicators.forEach((ind, idx) => {
-      ind.classList.remove('active');
-      if (idx === currentSlide) {
-        ind.classList.add('active');
-      }
-    });
-  };
+      // Update indicator dots
+      const indicators = indicatorsContainer.querySelectorAll('.indicator');
+      indicators.forEach((ind, idx) => {
+        ind.classList.remove('active');
+        if (idx === currentSlide) {
+          ind.classList.add('active');
+        }
+      });
+    };
 
-  const nextSlide = () => {
-    const nextIdx = (currentSlide + 1) % slides.length;
-    updateCarousel(nextIdx);
-  };
+    const nextSlide = () => {
+      const nextIdx = (currentSlide + 1) % slides.length;
+      updateCarousel(nextIdx);
+    };
 
-  const prevSlide = () => {
-    const prevIdx = (currentSlide - 1 + slides.length) % slides.length;
-    updateCarousel(prevIdx);
-  };
+    const prevSlide = () => {
+      const prevIdx = (currentSlide - 1 + slides.length) % slides.length;
+      updateCarousel(prevIdx);
+    };
 
-  // Click Events
-  nextBtn.addEventListener('click', () => {
-    nextSlide();
-    resetAutoplay();
-  });
-
-  prevBtn.addEventListener('click', () => {
-    prevSlide();
-    resetAutoplay();
-  });
-
-  // Dots Events
-  const indicators = indicatorsContainer.querySelectorAll('.indicator');
-  indicators.forEach((indicator, index) => {
-    indicator.addEventListener('click', () => {
-      updateCarousel(index);
+    // Click Events
+    nextBtn.addEventListener('click', () => {
+      nextSlide();
       resetAutoplay();
     });
-  });
 
-  // Autoplay functionality
-  const startAutoplay = () => {
-    autoplayTimer = setInterval(nextSlide, autoplayDuration);
-  };
+    prevBtn.addEventListener('click', () => {
+      prevSlide();
+      resetAutoplay();
+    });
 
-  const stopAutoplay = () => {
-    clearInterval(autoplayTimer);
-  };
+    // Dots Events
+    const indicators = indicatorsContainer.querySelectorAll('.indicator');
+    indicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => {
+        updateCarousel(index);
+        resetAutoplay();
+      });
+    });
 
-  const resetAutoplay = () => {
-    stopAutoplay();
+    // Autoplay functionality
+    const startAutoplay = () => {
+      autoplayTimer = setInterval(nextSlide, autoplayDuration);
+    };
+
+    const stopAutoplay = () => {
+      clearInterval(autoplayTimer);
+    };
+
+    const resetAutoplay = () => {
+      stopAutoplay();
+      startAutoplay();
+    };
+
+    // Pause on hover
+    const carouselWrapper = document.querySelector('.testimonials-carousel-wrapper');
+    if (carouselWrapper) {
+      carouselWrapper.addEventListener('mouseenter', stopAutoplay);
+      carouselWrapper.addEventListener('mouseleave', startAutoplay);
+    }
+
+    // Initialize Autoplay
     startAutoplay();
-  };
-
-  // Pause on hover
-  const carouselWrapper = document.querySelector('.testimonials-carousel-wrapper');
-  carouselWrapper.addEventListener('mouseenter', stopAutoplay);
-  carouselWrapper.addEventListener('mouseleave', startAutoplay);
-
-  // Initialize Autoplay
-  startAutoplay();
+  }
 
 
   /* ==========================================
@@ -413,25 +417,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (isEmailJSConfigured) {
       // Send via real EmailJS
-      // Parameters template matching the fields: name, email, phone, guests, date, time, notes
       emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', reservationForm)
         .then(() => {
           // Success Response
           resetLoadingState();
-          showFormAlert(`Thank you, ${formData.name}! Your reservation for ${formData.guests} guest(s) on ${formatDate(formData.date)} at ${formData.time} has been requested. We will email a confirmation shortly.`, 'success');
+          showToast(`✅ Table request received! We'll confirm your reservation shortly.`);
           reservationForm.reset();
           if (dateInput) dateInput.value = new Date().toISOString().split('T')[0];
         })
         .catch((error) => {
           // Error Response
           resetLoadingState();
-          showFormAlert(`Something went wrong. Let's reserve manually: please call +1 (234) 567-890. (Error: ${error.text || error})`, 'error');
+          showFormAlert(`Something went wrong. Let's reserve manually: please call +91 99999 99999. (Error: ${error.text || error})`, 'error');
         });
     } else {
       // Simulation Mock Mode (If no custom key is configured, behave beautifully)
       setTimeout(() => {
         resetLoadingState();
-        showFormAlert(`[Simulation Mode] Thank you, ${formData.name}! Your reservation request for ${formData.guests} guest(s) on ${formatDate(formData.date)} at ${formData.time} has been received. (Details logged in console).`, 'success');
+        showToast(`✅ Table request received! We'll confirm your reservation shortly.`);
         console.log("Reservation Request Details (Mock Simulation):", formData);
         reservationForm.reset();
         if (dateInput) dateInput.value = new Date().toISOString().split('T')[0];
@@ -509,4 +512,62 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 4000);
     }, 1000);
   });
+
+  /* ==========================================
+     11. Custom Toast Notification System
+     ========================================== */
+  const showToast = (message, duration = 6000) => {
+    const container = document.getElementById('toast-container');
+    if (!container) return;
+
+    const toast = document.createElement('div');
+    toast.className = 'toast-message';
+    toast.innerHTML = `<span>${message}</span>`;
+    
+    container.appendChild(toast);
+
+    // Auto fade out and remove
+    setTimeout(() => {
+      toast.classList.add('fade-out');
+      toast.addEventListener('transitionend', () => {
+        toast.remove();
+      });
+    }, duration);
+  };
+
+  /* ==========================================
+     12. Hero Mini Reservation Widget Scroll Action
+     ========================================== */
+  const heroWidgetBtn = document.getElementById('hero-widget-submit-btn');
+  if (heroWidgetBtn) {
+    heroWidgetBtn.addEventListener('click', () => {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
+
+  /* ==========================================
+     13. Mobile Sticky CTA Visibility Handler
+     ========================================== */
+  const mobileStickyCta = document.getElementById('mobile-sticky-cta');
+  const contactSection = document.getElementById('contact');
+
+  if (mobileStickyCta && contactSection) {
+    const handleStickyCtaVisibility = () => {
+      const rect = contactSection.getBoundingClientRect();
+      // If contact section is in viewport
+      const isContactVisible = rect.top < window.innerHeight && rect.bottom > 0;
+
+      if (window.scrollY > 400 && !isContactVisible) {
+        mobileStickyCta.classList.remove('hidden-state');
+      } else {
+        mobileStickyCta.classList.add('hidden-state');
+      }
+    };
+
+    window.addEventListener('scroll', handleStickyCtaVisibility);
+    handleStickyCtaVisibility(); // Run on load
+  }
 });
